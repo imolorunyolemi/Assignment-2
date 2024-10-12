@@ -63,18 +63,6 @@ To create a Decision Tree Model to classify the wine quality, and print the accu
 
 **tree.fit(X_train, y_train)  # Train the Decision Tree**
 
-I also tried visualizing the decision tree by copying the codes for the 'Visualization of decision tree' and editing the 'iris' to 'wine'. This is also depicted below:
-
-**#Visualization of decision tree**
-
-**dot_data = export_graphviz(tree, out_file=None, feature_names=wine.feature_names, class_names=wine.target_names, filled=True)**
-
-**graph = graphviz.Source(dot_data)**
-
-**graph.render("wine_decision_tree", format="png")**
-
-**graph**
-
 Then I went on to copy the 'Make predictions' code from the same example as above and pasted in the available space for 'Make predictions' as shown below:
 
 **y_pred = tree.predict(X_test) # Make predictions**
@@ -95,9 +83,28 @@ I went on to edit the 'SVM' in the 'print' code to 'Decision Tree', to have a ne
 
 **print(f"Accuracy of the Decision Tree model: {accuracy:.2f}")**
 
-Finally, I ran the code. Surprisingly, the decision tree charts did not show up (was not visualized). However, I was able to print the 'accuracy for the decision tree model' as 0.96
+I also tried visualizing the decision tree by copying the codes for the 'Visualization of decision tree' and editing the 'iris' to 'wine'. This is also depicted below:
 
-![Assignment 2 Part 3a (decision tree)](https://github.com/user-attachments/assets/fefc9eb6-1c4a-4d3b-9cdb-7f6012f4a578)
+**#Visualization of decision tree**
+
+**dot_data = export_graphviz(tree, out_file=None, feature_names=wine.feature_names, class_names=wine.target_names, filled=True)**
+
+**graph = graphviz.Source(dot_data)**
+
+**graph.render("wine_decision_tree", format="png")**
+
+**graph**
+
+Finally, I ran the code. I was able to visualize the decision tree charts as well as print the 'accuracy for the decision tree model' as 0.96
+
+![Assignment 2 Part 3ai (decision tree)](https://github.com/user-attachments/assets/d7588ee8-8d16-4399-a403-ee4342049caa)
+
+![Assignment 2 Part 3aii (decision tree)](https://github.com/user-attachments/assets/09204657-6dc1-4db2-ad37-96920311b296)
+
+![Assignment 2 Part 3aiii (decision tree)](https://github.com/user-attachments/assets/687dd861-8708-4081-84ea-1877cd7ddbeb)
+
+![Assignment 2 Part 3aiv (decision tree)](https://github.com/user-attachments/assets/907221ab-b2da-48e5-a9a2-a7757e28cdb2)
+
 
 To create a Logistic Regression Model to classify the wine quality, and print the accuracy for the model, I first copied the codes for 'training the Logistic Regression model' from the example on Logistic Regression given in class and pasted in the available space for 'Train the Logistic Regression model', as shown below:
 
