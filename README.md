@@ -1,4 +1,4 @@
-# Assignment-2 (PART 1) (Imoleayo Moses Olorunyolemi)
+# Assignment-2 (FIRST PART) (Imoleayo Moses Olorunyolemi)
 
 
 ***Part1:Visualize the Data***
@@ -147,3 +147,134 @@ Finally, I ran the code. I was able to visualize the Logistic Regression Decisio
 ![Assignment 2 Part 3b (Logistic Regression)](https://github.com/user-attachments/assets/cc060f7b-3869-4e05-a067-5e313b0565dc)
 
 ![Assignment 2 Part 3b (Logistic Regression Decision Boundary)](https://github.com/user-attachments/assets/fa94b8f0-16a3-46cf-be4c-060756ca3080)
+
+
+# Assignment-2 (SECOND PART) (Imoleayo Moses Olorunyolemi)
+
+**Part1 : In this section, we want to classify the MNIST dataset using Random Forest, Logistic Regression, and Neural Networks. We will print the accuracy for each model. The code for Random Forest will serve as an example, and you should complete the code for Logistic Regression and Neural Networks accordingly.**
+
+To classify the MNIST dataset using Logistic Regression, I copied the following codes from the Logistic Regression example in the 'machine learning notebook' from previous class and pasted it in the available coding box for the recent assignment (Part 1a):
+
+**log_regressor = LogisticRegression(max_iter=200) #Train the Logistic Regression**
+
+**log_regressor.fit(X_train[:, :2], y_train) #Train the Logistic Regression**
+
+I then went ahead to edit the codes to fit the required name and title for this particular data as instructed. Hence, the complete edited codes below:
+
+**logistic_classifier = LogisticRegression(max_iter=200) #Train the Logistic Regression**
+
+**logistic_classifier.fit(X_train, y_train) #Train the Logistic Regression**
+
+I also copied the print accuracy prediction code from the "Random Forest" example and edited to fit the data for "Logistic Regression" as shown below:
+
+**print(accuracy_logistic)**
+
+Finally, I ran the code to get the printed 'accuracy for the Logistic Regression' as 0.919.
+
+![Assignment 2 Part 4ai (Logistic Regression)](https://github.com/user-attachments/assets/2c5695c7-c440-48b5-ae0d-07def16009ac)
+
+
+To classify the MNIST dataset using Neural Networks, I copied the following codes from the MLP (Neural Network) example in the 'machine learning notebook' from previous class and pasted it in the available coding box for the recent assignment (Part 1b):
+
+**mlp = MLPClassifier(max_iter=1000) # Train the MLP**
+
+**mlp.fit(X_train, y_train) # Train the MLP**
+
+I also copied the print accuracy prediction code from the "Random Forest" example and edited to fit the data for "MLP (Neural Network)" as shown below:
+
+**print(accuracy_mlp)**
+
+Finally, I ran the code and got the printed 'accuracy for the MLP (Neural Network)' as 0.978.
+
+![Assignment 2 Part 4aii (MLP Neural Network)](https://github.com/user-attachments/assets/2dbec8d6-2e4e-4d15-94b6-d8f68b4a21b0)
+
+Note: All of my printed accuracy correlated with the percentage printed accuracy already calculated in "step 6" in the homework.
+
+![Assignment 2 Part 4aiii (Print Accuracies)](https://github.com/user-attachments/assets/5c188377-d892-4fde-b000-51782f0f4ff4)
+
+
+**Part2: take a photo of yourself, upload it to the jupyter notebook and detect your face using Yolo model**
+
+To detect my face from my picture using Yolo method, I initially uploaded my picture to the jupyter notebook by dragging my image to the file folder in the notebook.
+
+I then copied the codes for one of the "Object Detection" example (Game of thrones) given in class and pasted it in the available space for my code as shown below:
+
+**img_path = '/content/game of thrones.jpeg'  # path to your image**
+
+**image = Image.open(img_path)**
+
+
+**#Resize the image**
+
+**resized_image = image.resize((800, 600))**
+
+
+**#Convert the resized image to a format compatible with the model (e.g., NumPy array)**
+
+**#If your model requires a specific input format, you may need to adjust the image further.**
+
+**img_array = np.array(resized_image)**
+
+
+**#Perform inference**
+
+**results = model(img_array)**
+
+
+**#Show results**
+
+**results.show()  # This will display the image with detections**
+
+
+**#If you want to visualize the resized image**
+
+**plt.imshow(resized_image)**
+
+**plt.axis('off')**
+
+**plt.title('Resized Image')**
+
+**plt.show()**
+
+I then copied the 'path' for my uploaded picture and used it to replace the path in the "Object Detection" code that was previously copied. Hence, my new code looks like this:
+
+**img_path = '/content/Imole.jpg'  # path to your image**
+
+**image = Image.open(img_path)**
+
+
+**#Resize the image**
+
+**resized_image = image.resize((800, 600))**
+
+
+**#Convert the resized image to a format compatible with the model (e.g., NumPy array)**
+
+**#If your model requires a specific input format, you may need to adjust the image further.**
+
+**img_array = np.array(resized_image)**
+
+
+**#Perform inference**
+
+**results = model(img_array)**
+
+
+**#Show results**
+
+**results.show()  # This will display the image with detections**
+
+
+**#If you want to visualize the resized image**
+
+**plt.imshow(resized_image)**
+
+**plt.axis('off')**
+
+**plt.title('Resized Image')**
+
+**plt.show()**
+
+Finally, I ran the code and detected my face as a person's face with an accuracy of 0.89.
+
+![Assignment 2 Part 5](https://github.com/user-attachments/assets/da072cfc-91ba-4d3b-abf1-7fa0c623b8e8)
